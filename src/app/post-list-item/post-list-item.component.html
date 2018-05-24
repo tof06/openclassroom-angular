@@ -3,7 +3,8 @@
   'list-group-item-success': post.lovesIt > 0,
   'list-group-item-danger': post.lovesIt < 0
 }">
-  <h4 class="list-group-item-heading">{{ post.title }}
+  <h4 class="list-group-item-heading">
+    {{ post.title }}
     <span [ngClass]="{
       'label': true,
       'label-danger': post.lovesIt < 0,
@@ -19,7 +20,10 @@
       <i class="glyphicon glyphicon-thumbs-up"></i> Love it !
     </button>&nbsp;
     <button class="btn btn-danger" (click)="onPostDislike()">
-        <i class="glyphicon glyphicon-thumbs-down"></i> Don't Love it !
+      <i class="glyphicon glyphicon-thumbs-down"></i> Don't Love it !
+    </button>&nbsp;
+    <button class="btn btn-warning" (click)="onRemovePost()">
+      <i class="glyphicon glyphicon-minus"> Supprimer</i>
     </button>
   </p>
 </li>
